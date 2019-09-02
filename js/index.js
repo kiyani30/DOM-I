@@ -40,3 +40,19 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+
+// Nav bar
+
+let mySelection = document.querySelector('a');
+mySelection.style.color = "blue";
+console.log(mySelection)
+
+// update all the img 
+let ctaimg = document.getElementById("cta-img");
+ctaimg.setAttribute('src', siteContent["header"]["img-src"])
+
+let midpage = document.getElementById("middle-img");
+midpage.setAttribute('src', siteContent["middle page"]["img-src"])
+
