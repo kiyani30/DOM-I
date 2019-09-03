@@ -42,17 +42,42 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
+// update all the img 
+document.getElementById("middle-img").src="img/mid-page-accent.jpg";
+document.getElementById("cta-img").src="img/header-img.png";
 
 // Nav bar
 
-let mySelection = document.querySelector('a');
-mySelection.style.color = "blue";
-console.log(mySelection)
+const nav = document.querySelectorAll('nav a');
+for (let i = 0; i < nav.length; i++) {
+  nav[i].innerText = siteContent["nav"]["nav-item-" + (1+i)]
+}
 
-// update all the img 
-let ctaimg = document.getElementById("cta-img");
-ctaimg.setAttribute('src', siteContent["header"]["img-src"])
+// Header
+ const title = document.querySelector('.cta-text h1');
+ title.textContent = "DOM is Awesome";
 
-let midpage = document.getElementById("middle-img");
-midpage.setAttribute('src', siteContent["middle page"]["img-src"])
+// Top content
 
+const firstTitle = document.querySelectorAll('.top-content h4');
+firstTitle[0].textContent = siteContent["main-content"]["features-h4"];
+firstTitle[1].textContent = siteContent["main-content"]["about-h4"];
+
+const firstParagraph = document.querySelectorAll('.top-content p');
+firstParagraph[0].textContent = siteContent["main-content"]["features-content"];
+firstParagraph[1].textContent = siteContent["main-content"]["about-content"];
+
+//  Bottom content
+
+const secondTitle = document.querySelectorAll('.bottom-content h4');
+secondTitle[0].textContent = siteContent["main-content"]["features-h4"];
+secondTitle[1].textContent = siteContent["main-content"]["about-h4"];
+
+const secondParagraph = document.querySelectorAll('.bottom-content p');
+secondParagraph[0].textContent = siteContent["main-content"]["services-content"];
+secondParagraph[1].textContent = siteContent["main-content"]["product-content"];
+
+// Contact :
+
+const contact = document.querySelectorAll('.contact');
+contact.innerText = "contact";
