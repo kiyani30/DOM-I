@@ -40,3 +40,68 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+// update all the img 
+document.getElementById("middle-img").src="img/mid-page-accent.jpg";
+document.getElementById("cta-img").src="img/header-img.png";
+
+// Nav bar
+
+const nav = document.querySelectorAll('nav a');
+for (let i = 0; i < nav.length; i++) {
+  nav[i].innerText = siteContent["nav"]["nav-item-" + (1+i)]
+}
+
+// Header
+ const title = document.querySelector('.cta-text h1');
+ title.textContent = "DOM is Awesome";
+
+// Top content
+
+const firstPart = document.querySelectorAll('.top-content h4');
+firstPart[0].textContent = siteContent["main-content"]["features-h4"];
+firstPart[1].textContent = siteContent["main-content"]["about-h4"];
+
+const firstParagraph = document.querySelectorAll('.top-content p');
+firstParagraph[0].textContent = siteContent["main-content"]["features-content"];
+firstParagraph[1].textContent = siteContent["main-content"]["about-content"];
+
+//  Bottom content
+
+const secondPart = document.querySelectorAll('.bottom-content h4');
+secondPart[0].textContent = siteContent["main-content"]["product-h4"];
+secondPart[1].textContent = siteContent["main-content"]["vision-h4"];
+
+const secondParagraph = document.querySelectorAll('.bottom-content p');
+secondParagraph[0].textContent = siteContent["main-content"]["services-content"];
+secondParagraph[1].textContent = siteContent["main-content"]["product-content"];
+
+// Contact :
+
+const contact = document.querySelectorAll('.contact h4');
+
+
+// Append 
+
+
+// let nav = document.getElementsByTagName("nav");
+// const nav1 = document.createElement("a");
+// // const nav1 = document.querySelectorAll("nav");
+// nav1.textContent = "Team";
+// nav.appendChild(nav1);
+
+
+// const nav2 = document.querySelectorAll('nav');
+// nav2.textContent = "Logout";
+// let nav = document.getElementsByTagName("nav");
+// nav.appendChild(nav1);
+
+
+// Change colors
+
+const navColor = document.querySelectorAll('nav a');
+for (let i = 0; i < nav.length; i++) {
+  nav[i].style.color = "green";
+}
+
